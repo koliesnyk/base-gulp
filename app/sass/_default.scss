@@ -1,0 +1,204 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	min-width: 320px;
+	position: relative;
+}
+
+article,
+aside,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	min-width: 0;
+}
+
+.hidden,
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	background: transparent;
+
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+
+	img {
+		border: 0;
+	}
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 75%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	border: 0;
+	font: inherit;
+	color: inherit;
+	appearance: none;
+	border-radius: 0;
+	text-transform: none;
+	box-sizing: border-box;
+	outline: none !important;
+	background-clip: padding-box;
+	background-color: transparent;
+}
+
+button,
+html input[type='button'] {
+	cursor: pointer;
+	appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button,
+input {
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+input {
+	line-height: normal;
+
+	&[type='reset'],
+	&[type='submit'] {
+		cursor: pointer;
+		appearance: button;
+	}
+
+	&[type='checkbox'],
+	&[type='radio'] {
+		box-sizing: border-box;
+		padding: 0;
+	}
+
+	&[type='number'] {
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			height: auto;
+		}
+	}
+
+	&[type='search'] {
+		appearance: textfield;
+		box-sizing: border-box;
+
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-decoration {
+			appearance: none;
+		}
+	}
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: #000;
+	font-weight: 400;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	pointer-events: none;
+	user-select: none;
+	border: 0;
+}
+
+.clearfix {
+	clear: both;
+}

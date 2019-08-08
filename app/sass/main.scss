@@ -1,0 +1,21 @@
+@import '_default';
+@import '_fonts';
+@import '_vars';
+
+body {
+	color: $text;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+.box {
+	width: 1240px;
+	margin: 0 auto !important;
+}
+
+main {
+	position: relative;
+	overflow: hidden;
+}
+
+@import '_media';
