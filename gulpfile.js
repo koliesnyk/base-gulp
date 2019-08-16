@@ -36,7 +36,7 @@ gulp.task('scripts', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-var localFiles   = 'app/**/*';
+var localFiles = 'app/**/*';
 var remoteFolder = '/path/to/site';
 
 var ftpConfig = {
@@ -50,15 +50,14 @@ var ftpConfig = {
 	secureOptions: {rejectUnauthorized: false}
 };
 
-gulp.task('ftp-deploy-watch', () => {
-	// var connection     = ftp.create(ftpConfig);
-	// var localFilesGlob = localFiles + '**';
+gulp.task('ftp-deploy-watch', function() {
+	// var conn = ftp.create(ftpConfig);
 
 	// gulp.watch(localFiles)
 	// .on('change', function(event) {
-	// 	return gulp.src(localFilesGlob, {base: localFiles, buffer: false})
-	// 	.pipe(connection.newer(remoteFolder))
-	// 	.pipe(connection.dest(remoteFolder))
+	// 	return gulp.src(localFiles, {base: 'app/', buffer: false })
+	// 	.pipe(conn.newer(remoteFolder))
+	// 	.pipe(conn.dest(remoteFolder))
 	// 	;
 	// });
 });
