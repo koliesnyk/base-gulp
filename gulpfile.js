@@ -62,18 +62,18 @@ function getFtpConnection() {
 }
 
 gulp.task('ftp-deploy-watch', function () {
-	var ftpConnection = getFtpConnection();
+	// var ftpConnection = getFtpConnection();
 
-	gulp.watch(localFiles).on('change', function (changedFile) {
-		console.log('Changes detected! Uploading file:' + changedFile)
-		return gulp
-			.src(changedFile, {
-				base: 'app/',
-				buffer: false
-			})
-			.pipe(ftpConnection.newer(remoteFolder))
-			.pipe(ftpConnection.dest(remoteFolder));
-	});
+	// gulp.watch(localFiles).on('change', function (changedFile) {
+	// 	console.log('Changes detected! Uploading file:' + changedFile)
+	// 	return gulp
+	// 		.src(changedFile, {
+	// 			base: 'app/',
+	// 			buffer: false
+	// 		})
+	// 		.pipe(ftpConnection.newer(remoteFolder))
+	// 		.pipe(ftpConnection.dest(remoteFolder));
+	// });
 });
 
 gulp.task('watch', function () {
