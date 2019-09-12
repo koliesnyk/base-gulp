@@ -1,9 +1,8 @@
-var gulp 				 = require('gulp'),
-		sass 				 = require('gulp-sass'),
-		browserSync  = require('browser-sync'),
-		cleancss		 = require('gulp-clean-css'),
-		autoprefixer = require('gulp-autoprefixer'),
-		ftp 				 = require('vinyl-ftp');
+var gulp = require('gulp'),
+		sass = require('gulp-sass'),
+		browserSync = require('browser-sync'),
+		cleancss = require('gulp-clean-css'),
+		autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('browser-sync', function () {
 	browserSync({
@@ -11,7 +10,7 @@ gulp.task('browser-sync', function () {
 			baseDir: 'app'
 		},
 		notify: false,
-	})
+	});
 });
 
 gulp.task('styles', function () {
@@ -31,7 +30,7 @@ gulp.task('styles', function () {
 			}
 		}))
 		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.stream())
+		.pipe(browserSync.stream());
 });
 
 gulp.task('html', function () {
@@ -45,35 +44,7 @@ gulp.task('scripts', function () {
 	return gulp.src('app/js/**/*.js')
 		.pipe(browserSync.reload({
 			stream: true
-		}))
-});
-
-var localFiles = 'app/**/*',
-		remoteFolder = '/path/to/site';
-
-function getFtpConnection() {
-	return ftp.create({
-		host: 'host',
-		port: 21,
-		user: 'user',
-		password: 'password',
-		parallel: 10
-	});
-}
-
-gulp.task('ftp-deploy-watch', function () {
-	// var ftpConnection = getFtpConnection();
-
-	// gulp.watch(localFiles).on('change', function (changedFile) {
-	// 	console.log('Changes detected! Uploading file:' + changedFile)
-	// 	return gulp
-	// 		.src(changedFile, {
-	// 			base: 'app/',
-	// 			buffer: false
-	// 		})
-	// 		.pipe(ftpConnection.newer(remoteFolder))
-	// 		.pipe(ftpConnection.dest(remoteFolder));
-	// });
+		}));
 });
 
 gulp.task('watch', function () {
@@ -82,4 +53,4 @@ gulp.task('watch', function () {
 	gulp.watch('app/*.html', gulp.parallel('html'));
 });
 
-gulp.task('default', gulp.parallel('styles', 'ftp-deploy-watch', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'browser-sync', 'watch'));

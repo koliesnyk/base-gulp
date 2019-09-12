@@ -1,6 +1,6 @@
 {
   "name": "startgulp",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Start Template",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,6 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
-    "gulp-sass": "^4.0.2",
-    "vinyl-ftp": "^0.6.1"
+    "gulp-sass": "^4.0.2"
   }
 }
