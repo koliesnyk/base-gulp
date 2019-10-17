@@ -11,6 +11,9 @@ body {
 	line-height: 1;
 	min-width: 320px;
 	position: relative;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
 }
 
 article,
@@ -43,15 +46,13 @@ fieldset {
 	min-width: 0;
 }
 
-.hidden,
-[hidden],
-template {
-	display: none;
-}
-
 a {
 	text-decoration: none;
 	background: transparent;
+
+	&:visited {
+		filter: grayscale(50%);
+	}
 
 	&:active,
 	&:hover {
@@ -182,21 +183,19 @@ ul {
 	list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	color: #000;
-	font-weight: 400;
-}
-
 img {
 	max-width: 100%;
 	height: auto;
 	pointer-events: none;
 	user-select: none;
 	border: 0;
+	vertical-align: top;
+}
+
+.hidden,
+[hidden],
+template {
+	display: none;
 }
 
 .clearfix {
