@@ -1,0 +1,36 @@
+// fonts
+$porimaryFont: sans-serif;
+
+// colors
+$primaryText: #000;
+$primaryColor: #3c6;
+
+// sizes
+$containerWidth: 1140px;
+$bodyFont: 16px;
+$titleFont: 27px;
+
+// mixins
+@mixin desktop {
+	@media (min-width: 1141px) { @content; }
+}
+
+@mixin after-desktop {
+	@media (max-width: 1140px) { @content; }
+}
+
+@mixin tablet {
+	@media (max-width: 1020px) { @content; }
+}
+
+@mixin after-tablet {
+	@media (max-width: 760px) { @content; }
+}
+
+@mixin from-tablet {
+	@media (min-width: 761px) { @content; }
+}
+
+@mixin mobile {
+	@media (max-width: 480px) { @content; }
+}
