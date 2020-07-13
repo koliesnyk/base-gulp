@@ -5,7 +5,7 @@
 body {
 	color: $primaryText;
 	font-size: $bodyFont;
-	font-family: $porimaryFont;
+	font-family: $primaryFont;
 }
 
 main {
@@ -23,5 +23,6 @@ main {
 	@include after-desktop {
 		padding-left: 15px;
 		padding-right: 15px;
+		width: 100%;
 	}
 }

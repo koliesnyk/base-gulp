@@ -15,6 +15,7 @@ test.xunit
 
 # Dependency directory
 node_modules
+docs
 
 # Other files & folders
 .idea
