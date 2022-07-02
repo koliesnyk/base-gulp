@@ -1,36 +1,55 @@
-// fonts
-$primaryFont: 'Open Sans', sans-serif;
-
 // colors
-$primaryText: #111;
-$primaryColor: #03a87c;
+:root {
+	--root-background: linear-gradient(180deg,#fff 0,#fff 70%,#f9fbfc);
+	--root-text: #344554;
 
-// sizes
-$containerWidth: 1140px;
-$bodyFont: 16px;
-$titleFont: 27px;
+	--box-background: #fff;
+
+	--primary-text: #fff;
+  --primary-color: #4169E1;
+	--primary-active: #FF4F79;
+
+	--secondary-color: #03a87c;
+
+	--container-width: 1440px;
+}
 
 // mixins
-@mixin desktop {
-	@media (min-width: 1141px) { @content; }
+@mixin desktop {@media (min-width: 1141px) { @content; }}
+@mixin after-desktop {@media (max-width: 1140px) { @content; }}
+@mixin tablet {@media (max-width: 1020px) { @content; }}
+@mixin after-tablet {@media (max-width: 760px) { @content; }}
+@mixin from-tablet {@media (min-width: 761px) { @content; }}
+@mixin mobile {@media (max-width: 480px) { @content; }}
+
+%flex-container {
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+	min-height: 0;
 }
 
-@mixin after-desktop {
-	@media (max-width: 1140px) { @content; }
+%flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@mixin tablet {
-	@media (max-width: 1020px) { @content; }
-}
+// fonts
+$primaryFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
-@mixin after-tablet {
-	@media (max-width: 760px) { @content; }
-}
+// padding
+$p: 1em;
+$p-xs: $p / 2;
+$p-lg: $p * 2;
 
-@mixin from-tablet {
-	@media (min-width: 761px) { @content; }
-}
+// margin
+$m: 1em;
+$m-xs: $m / 2;
+$m-lg: $m * 2;
 
-@mixin mobile {
-	@media (max-width: 480px) { @content; }
-}
+// settings
+$trs: 0.2s;
+$border-radius: 0;
+$navbar-width: 300px;
