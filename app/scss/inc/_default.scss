@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  &.smooth-scroll {
+  scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  min-width: 375px;
+  position: relative;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background: var(--grey-color);
+  color: var(--root-text);
+  font-family: var(--primary-font);
+  font-size: 16px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+
+  &[type="reset"],
+  &[type="submit"] {
+    cursor: pointer;
+    appearance: button;
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  &[type="number"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+
+  &[type="search"] {
+    appearance: textfield;
+    box-sizing: border-box;
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      appearance: none;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+html input[type="button"] {
+  cursor: pointer;
+  appearance: button;
+  background: transparent;
+  border: 0;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-size: 0.6em;
+  background-position: calc(100% - 1em) center;
+  background-repeat: no-repeat;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  border: 0;
+  vertical-align: top;
+}
+
+[hidden], .hidden {
+  display: none !important;
+}
+
+.menu-open {
+  overflow: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  max-width: 100%;
+
+  @include desktop {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 {
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.mb-1 {
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.mb-2 {
+  &:not(:last-child) {
+    margin-bottom: 0.7rem;
+  }
+}
+
+.mb-3 {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.mb-4 {
+  &:not(:last-child) {
+    margin-bottom: 1.7rem;
+  }
+}
+
+.mb-5 {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.flex-container {
+  @extend %flex-container;
+}
+
+.flex-center {
+  @extend %flex-center;
+}

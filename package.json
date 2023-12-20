@@ -14,8 +14,10 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^5.1.0",
+    "gulp-util": "^3.0.8",
     "sass": "^1.53.0",
-    "gulp-rigger": "^0.5.8"
+    "vinyl-ftp": "^0.6.1"
   }
 }
