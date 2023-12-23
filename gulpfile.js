@@ -4,7 +4,8 @@ var gulp         = require("gulp"),
 		cleancss     = require("gulp-clean-css"),
 		autoprefixer = require("gulp-autoprefixer"),
 		gutil        = require("gulp-util"),
-		ftp          = require("vinyl-ftp");
+		ftp          = require("vinyl-ftp"),
+		rigger 			 = require('gulp-rigger');
 
 gulp.task("browser-sync", function () {
   browserSync({
@@ -60,6 +61,14 @@ gulp.task("styles", function () {
     .pipe(browserSync.stream());
 });
 
+gulp.task("html", function () {
+  return gulp
+    .src("app/html-dev/*.html")
+    .pipe(rigger())
+    .pipe(gulp.dest("app/"))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
 gulp.task("scripts", function () {
   return gulp.src("app/js/**/*.js").pipe(
     browserSync.reload({
@@ -71,6 +80,7 @@ gulp.task("scripts", function () {
 gulp.task("watch", function () {
   gulp.watch("app/scss/**/*.scss", gulp.parallel("styles"));
   gulp.watch("app/js/**/*.js", gulp.parallel("scripts"));
+  gulp.watch("app/html-dev/**/*.html", gulp.parallel("html"));
   // gulp.watch("app/**/*", gulp.series("deploy"));
 });
 
