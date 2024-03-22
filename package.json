@@ -1,6 +1,6 @@
 {
   "name": "startgulp",
-  "version": "5.0.0",
+  "version": "5.0.03",
   "description": "Start Template",
   "main": "index.js",
   "scripts": {

@@ -1,14 +1,8 @@
-// libs
-// @import "libs/swiper.min.css";
-// @import "libs/animate.min.css";
-// @import "libs/fancybox.css";
+// // libs
+@import "libs/_index";
 
-// styles
-@import "inc/_vars";
-@import "inc/_default";
+// // settings
+@import "settings/_index";
 
-// parts
-@import "parts/_header";
-@import "parts/_footer";
-
-.hero-block {}
+// // styles
+@import "styles/_index";

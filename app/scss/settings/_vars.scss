@@ -1,0 +1,37 @@
+@mixin large {@media (max-width: 1440px) {@content;}}
+@mixin desktop {@media (max-width: 1240px) {@content;}}
+@mixin tablet {@media (max-width: 1024px) {@content;}}
+@mixin mobile {@media (max-width: 768px) {@content;}}
+@mixin small {@media (max-width: 480px) {@content;}}
+
+:root {
+  --root-background: #EFEFEF;
+  --root-text: #1c1c1c;
+
+  --font-primary: "";
+  --font-secondary: "";
+  --font-size: 16px;
+  --font-weight: 400;
+
+  --border-radius: 4px;
+  --transition: 0.2s;
+}
+
+%flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-inline-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

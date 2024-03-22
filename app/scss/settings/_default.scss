@@ -6,9 +6,7 @@
 }
 
 html {
-  &.smooth-scroll {
   scroll-behavior: smooth;
-  }
 }
 
 body {
@@ -19,14 +17,11 @@ body {
   position: relative;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  background: var(--grey-color);
+  -webkit-font-smoothing: antialiased;
   color: var(--root-text);
-  font-family: var(--primary-font);
-  font-size: 16px;
-
-  @include mobile {
-    font-size: 12px;
-  }
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  background: var(--root-background);
 }
 
 fieldset {
@@ -44,6 +39,8 @@ th {
 input {
   line-height: normal;
   border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
 
   &[type="reset"],
   &[type="submit"] {
@@ -78,6 +75,9 @@ input {
 textarea {
   resize: none;
   overflow: auto;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 a {
@@ -85,11 +85,14 @@ a {
 }
 
 button,
-html input[type="button"] {
+input[type="button"] {
   cursor: pointer;
   appearance: button;
   background: transparent;
   border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 select {
@@ -99,6 +102,7 @@ select {
   background-size: 0.6em;
   background-position: calc(100% - 1em) center;
   background-repeat: no-repeat;
+  border-radius: 0;
 }
 
 ul {
@@ -120,110 +124,10 @@ img {
   vertical-align: top;
 }
 
+strong {
+  font-weight: 500;
+}
+
 [hidden], .hidden {
   display: none !important;
-}
-
-.menu-open {
-  overflow: hidden !important;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: inherit;
-}
-
-h1 {
-  font-size: 1.7rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-.container {
-  margin: 0 auto;
-  width: 1440px;
-  max-width: 100%;
-
-  @include desktop {
-    width: 100%;
-    padding-left: 24px;
-    padding-right: 24px;
-
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.mb-0 {
-  &:not(:last-child) {
-    margin-bottom: 0;
-  }
-}
-
-.mb-1 {
-  &:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-}
-
-.mb-2 {
-  &:not(:last-child) {
-    margin-bottom: 0.7rem;
-  }
-}
-
-.mb-3 {
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-}
-
-.mb-4 {
-  &:not(:last-child) {
-    margin-bottom: 1.7rem;
-  }
-}
-
-.mb-5 {
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
-.flex-container {
-  @extend %flex-container;
-}
-
-.flex-center {
-  @extend %flex-center;
 }

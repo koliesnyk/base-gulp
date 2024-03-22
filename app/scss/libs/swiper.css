@@ -1,5 +1,5 @@
 /**
- * Swiper 10.1.0
+ * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: August 1, 2023
+ * Released on: November 22, 2023
  */
 
 @font-face {
@@ -34,7 +34,6 @@
   margin-right: auto;
   position: relative;
   overflow: hidden;
-  overflow: clip;
   list-style: none;
   padding: 0;
   z-index: 1;
@@ -557,7 +556,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
   position: relative;
-  -ms-touch-action: none;
+  touch-action: none;
   background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, .1))
 }
 
@@ -664,7 +663,10 @@ button.swiper-pagination-bullet {
   pointer-events: none
 }
 
-.swiper-fade .swiper-slide-active,
+.swiper-fade .swiper-slide-active {
+  pointer-events: auto
+}
+
 .swiper-fade .swiper-slide-active .swiper-slide-active {
   pointer-events: auto
 }
